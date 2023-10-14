@@ -6245,6 +6245,70 @@ Switches electrical signals</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="SparkFun-Aesthetics" urn="urn:adsk.eagle:library:507">
+<description>&lt;h3&gt;SparkFun Aesthetics&lt;/h3&gt;
+This library contiains non-functional items such as logos, build/ordering notes, frame blocks, etc. 
+&lt;br&gt;
+&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
+&lt;br&gt;
+&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;
+&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="FR-A4L" urn="urn:adsk.eagle:symbol:41384377/3" library_version="4">
+<description>&lt;h3&gt;Schematic Frame - A4L - European Format&lt;/h3&gt;
+&lt;p&gt;Standard A4 size frame in Landscape&lt;/p&gt;
+&lt;p&gt;Devices using:
+&lt;ul&gt;&lt;li&gt;FRAME-A4L&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;</description>
+<rectangle x1="178.7652" y1="0" x2="179.3748" y2="20.32" layer="94"/>
+<rectangle x1="225.7552" y1="-26.67" x2="226.3648" y2="67.31" layer="94" rot="R90"/>
+<wire x1="225.29" y1="-0.1" x2="225.29" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="225.29" y1="5.08" x2="273.05" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="225.29" y1="5.08" x2="179.07" y2="5.08" width="0.1016" layer="94"/>
+<wire x1="179.07" y1="10.16" x2="225.29" y2="10.16" width="0.1016" layer="94"/>
+<wire x1="225.29" y1="10.16" x2="273.05" y2="10.16" width="0.1016" layer="94"/>
+<wire x1="179.07" y1="15.24" x2="273.05" y2="15.24" width="0.1016" layer="94"/>
+<wire x1="225.29" y1="5.08" x2="225.29" y2="10.16" width="0.1016" layer="94"/>
+<wire x1="179.07" y1="19.05" x2="179.07" y2="20.32" width="0.6096" layer="94"/>
+<wire x1="179.07" y1="20.32" x2="180.34" y2="20.32" width="0.6096" layer="94"/>
+<text x="181.61" y="11.43" size="2.54" layer="94" font="vector">&gt;DRAWING_NAME</text>
+<text x="181.61" y="6.35" size="2.286" layer="94" font="vector">&gt;LAST_DATE_TIME</text>
+<text x="195.58" y="1.27" size="2.54" layer="94" font="vector">&gt;SHEET</text>
+<text x="181.61" y="1.27" size="2.54" layer="94" font="vector">Sheet:</text>
+<text x="181.61" y="16.51" size="2.54" layer="94" font="vector">&gt;CNAME</text>
+<text x="226.16" y="1.27" size="2.54" layer="94" font="vector">Rev:</text>
+<text x="226.26" y="6.35" size="2.54" layer="94" font="vector">&gt;DESIGNER</text>
+<text x="234.92" y="1.17" size="2.54" layer="94" font="vector">&gt;CREVISION</text>
+<frame x1="-3.81" y1="-3.81" x2="276.86" y2="182.88" columns="8" rows="5" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="FRAME-A4L" urn="urn:adsk.eagle:component:41384676/3" prefix="FRAME" library_version="4">
+<description>&lt;h3&gt;Schematic Frame - A4L - European Format&lt;/h3&gt;
+&lt;p&gt;Standard A4 size frame in Landscape&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="FR-A4L" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name="">
+<attribute name="DESIGNER" value="" constant="no"/>
+<attribute name="REV" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -6347,6 +6411,7 @@ Switches electrical signals</description>
 <part name="U$9" library="X15-Pi-Shield-Parts" deviceset="8X_CONN" device="">
 <attribute name="SPICEPREFIX" value="X"/>
 </part>
+<part name="FRAME3" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" deviceset="FRAME-A4L" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6717,13 +6782,6 @@ Switches electrical signals</description>
 <label x="203.2" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="GPIO_7" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="GPIO18"/>
-<wire x1="139.7" y1="160.02" x2="139.7" y2="167.64" width="0.1524" layer="91"/>
-<label x="139.7" y="162.56" size="1.778" layer="95" rot="R90"/>
-</segment>
-</net>
 <net name="GPIO_2" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="GPIO23"/>
@@ -6770,13 +6828,6 @@ Switches electrical signals</description>
 <wire x1="180.34" y1="160.02" x2="180.34" y2="167.64" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="GPIO_8" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="GPIO12"/>
-<wire x1="190.5" y1="160.02" x2="190.5" y2="167.64" width="0.1524" layer="91"/>
-<label x="190.5" y="162.56" size="1.778" layer="95" rot="R90"/>
-</segment>
-</net>
 <net name="GPIO_1" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="GPIO16"/>
@@ -6791,13 +6842,6 @@ Switches electrical signals</description>
 <label x="205.74" y="162.56" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
-<net name="GPIO_6" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="GPIO21"/>
-<wire x1="210.82" y1="160.02" x2="210.82" y2="167.64" width="0.1524" layer="91"/>
-<label x="210.82" y="162.56" size="1.778" layer="95" rot="R90"/>
-</segment>
-</net>
 <net name="INT" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="GPIO26"/>
@@ -6810,20 +6854,6 @@ Switches electrical signals</description>
 <pinref part="U$1" gate="G$1" pin="GPIO19"/>
 <wire x1="200.66" y1="132.08" x2="200.66" y2="127" width="0.1524" layer="91"/>
 <label x="200.66" y="121.92" size="1.778" layer="95" rot="R90"/>
-</segment>
-</net>
-<net name="GPIO_9" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="GPIO13"/>
-<wire x1="195.58" y1="132.08" x2="195.58" y2="127" width="0.1524" layer="91"/>
-<label x="195.58" y="121.92" size="1.778" layer="95" rot="R90"/>
-</segment>
-</net>
-<net name="GPIO_10" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="GPIO6"/>
-<wire x1="190.5" y1="132.08" x2="190.5" y2="127" width="0.1524" layer="91"/>
-<label x="190.5" y="121.92" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="RX1_INT" class="0">
@@ -6879,13 +6909,6 @@ Switches electrical signals</description>
 <segment>
 <pinref part="U$1" gate="G$1" pin="3V3@17"/>
 <wire x1="154.94" y1="132.08" x2="154.94" y2="127" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="GPIO_11" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="GPIO22"/>
-<wire x1="149.86" y1="132.08" x2="149.86" y2="127" width="0.1524" layer="91"/>
-<label x="149.86" y="121.92" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="IMU_INT" class="0">
@@ -6968,12 +6991,6 @@ Switches electrical signals</description>
 <label x="137.16" y="45.72" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$42" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="3V3@1"/>
-<wire x1="114.3" y1="132.08" x2="114.3" y2="129.54" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="3V3" class="0">
 <segment>
 <pinref part="J1" gate="G$1" pin="1"/>
@@ -7031,6 +7048,11 @@ Switches electrical signals</description>
 <label x="81.28" y="170.18" size="1.778" layer="95"/>
 <wire x1="83.82" y1="170.18" x2="73.66" y2="170.18" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="3V3@1"/>
+<wire x1="114.3" y1="132.08" x2="114.3" y2="129.54" width="0.1524" layer="91"/>
+<label x="114.3" y="127" size="1.778" layer="95" rot="R90"/>
+</segment>
 </net>
 <net name="SCL" class="0">
 <segment>
@@ -7067,6 +7089,11 @@ Switches electrical signals</description>
 <pinref part="U$5" gate="G$1" pin="SCL"/>
 <wire x1="45.72" y1="101.6" x2="33.02" y2="101.6" width="0.1524" layer="91"/>
 <label x="35.56" y="101.6" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="GPIO12"/>
+<wire x1="190.5" y1="160.02" x2="190.5" y2="167.64" width="0.1524" layer="91"/>
+<label x="190.5" y="162.56" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="PI_POWER" class="0">
@@ -7160,6 +7187,41 @@ Switches electrical signals</description>
 <wire x1="81.28" y1="96.52" x2="81.28" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="88.9" x2="83.82" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="JP5" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="CTRL" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="GPIO22"/>
+<wire x1="149.86" y1="132.08" x2="149.86" y2="127" width="0.1524" layer="91"/>
+<label x="149.86" y="127" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="DGND" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="GPIO6"/>
+<wire x1="190.5" y1="132.08" x2="190.5" y2="127" width="0.1524" layer="91"/>
+<label x="190.5" y="124.46" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="SALERT" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="GPIO13"/>
+<wire x1="195.58" y1="132.08" x2="195.58" y2="127" width="0.1524" layer="91"/>
+<label x="195.58" y="121.92" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="SA1" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="GPIO18"/>
+<wire x1="139.7" y1="160.02" x2="139.7" y2="167.64" width="0.1524" layer="91"/>
+<label x="139.7" y="162.56" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="SA0" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="GPIO21"/>
+<wire x1="210.82" y1="160.02" x2="210.82" y2="167.64" width="0.1524" layer="91"/>
+<label x="210.82" y="162.56" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 </nets>
@@ -7812,6 +7874,22 @@ Switches electrical signals</description>
 </net>
 </nets>
 </sheet>
+<sheet>
+<plain>
+</plain>
+<instances>
+<instance part="FRAME3" gate="G$1" x="0" y="0" smashed="yes">
+<attribute name="DRAWING_NAME" x="181.61" y="11.43" size="2.54" layer="94" font="vector"/>
+<attribute name="LAST_DATE_TIME" x="181.61" y="6.35" size="2.286" layer="94" font="vector"/>
+<attribute name="SHEET" x="195.58" y="1.27" size="2.54" layer="94" font="vector"/>
+<attribute name="DESIGNER" x="226.26" y="6.35" size="2.54" layer="94" font="vector"/>
+</instance>
+</instances>
+<busses>
+</busses>
+<nets>
+</nets>
+</sheet>
 </sheets>
 </schematic>
 </drawing>
@@ -7819,6 +7897,16 @@ Switches electrical signals</description>
 <note version="6.3" minversion="6.2.2" severity="warning">
 Since Version 6.2.2 text objects can contain more than one line,
 which will not be processed correctly with this version.
+</note>
+<note version="8.2" severity="warning">
+Since Version 8.2, EAGLE supports online libraries. The ids
+of those online libraries will not be understood (or retained)
+with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports URNs for individual library
+assets (packages, symbols, and devices). The URNs of those assets
+will not be understood (or retained) with this version.
 </note>
 </compatibility>
 </eagle>
