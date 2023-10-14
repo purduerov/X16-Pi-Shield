@@ -7242,12 +7242,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="99.06" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$34" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="3V3@17"/>
-<wire x1="154.94" y1="132.08" x2="154.94" y2="127" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="IMU_INT" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="GPIO27"/>
@@ -7389,6 +7383,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="U$1" gate="G$1" pin="3V3@1"/>
 <wire x1="114.3" y1="132.08" x2="114.3" y2="129.54" width="0.1524" layer="91"/>
 <label x="114.3" y="127" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="3V3@17"/>
+<wire x1="154.94" y1="132.08" x2="154.94" y2="127" width="0.1524" layer="91"/>
+<label x="154.94" y="127" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="SCL" class="0">
@@ -8347,6 +8346,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="76.2" y1="82.55" x2="81.28" y2="82.55" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="82.55" x2="81.28" y2="83.82" width="0.1524" layer="91"/>
 <label x="81.28" y="81.28" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="GPIO5" class="0">
+<segment>
+<pinref part="J4" gate="A" pin="10"/>
+<wire x1="76.2" y1="92.71" x2="83.82" y2="92.71" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="92.71" x2="83.82" y2="93.98" width="0.1524" layer="91"/>
+<label x="83.82" y="91.44" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
