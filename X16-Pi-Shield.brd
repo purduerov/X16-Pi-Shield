@@ -1773,6 +1773,16 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-07888" x="-40.64" y="-392.43" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="-40.64" y="-393.192" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
+<element name="TP4" library="SparkFun-Connectors" package="PAD.03X.03" value="TEST-POINT3" x="-41.91" y="-396.24" smashed="yes"/>
+<element name="TP5" library="SparkFun-Connectors" package="PAD.03X.03" value="TEST-POINT3" x="-41.91" y="-398.78" smashed="yes"/>
+<element name="JP5" library="SparkFun-Jumpers" package="SMT-JUMPER_2_NO_SILK" value="JUMPER-SMT_2_NO_SILK" x="-36.83" y="-402.59" smashed="yes">
+<attribute name="NAME" x="-36.83" y="-401.447" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
+<attribute name="VALUE" x="-36.83" y="-403.733" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+</element>
+<element name="JP8" library="SparkFun-Jumpers" package="SMT-JUMPER_2_NO_SILK" value="JUMPER-SMT_2_NO_SILK" x="-36.83" y="-407.67" smashed="yes">
+<attribute name="NAME" x="-36.83" y="-406.527" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
+<attribute name="VALUE" x="-36.83" y="-408.813" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+</element>
 </elements>
 <signals>
 <signal name="GND">
@@ -2159,14 +2169,18 @@ design rules under a new name.</description>
 <contactref element="U$1" pad="12"/>
 <contactref element="J4" pad="17"/>
 <contactref element="U1" pad="4"/>
+<contactref element="TP5" pad="1"/>
+<contactref element="JP5" pad="1"/>
+<wire x1="-37.2364" y1="-402.59" x2="-41.91" y2="-398.78" width="0" layer="19" extent="1-1"/>
+<wire x1="-32.08" y1="-380.675" x2="-41.91" y2="-398.78" width="0" layer="19" extent="1-1"/>
 <wire x1="-13.97" y1="-317.246" x2="-32.08" y2="-380.675" width="0" layer="19" extent="1-1"/>
 <wire x1="5.8166" y1="-19.8882" x2="-13.97" y2="-317.246" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SA0">
 <contactref element="U$1" pad="40"/>
 <contactref element="J4" pad="19"/>
-<contactref element="U1" pad="5"/>
-<wire x1="-16.51" y1="-317.246" x2="-32.08" y2="-381.325" width="0" layer="19" extent="1-1"/>
+<contactref element="TP4" pad="1"/>
+<wire x1="-16.51" y1="-317.246" x2="-41.91" y2="-396.24" width="0" layer="19" extent="1-1"/>
 <wire x1="41.3766" y1="-19.8882" x2="-16.51" y2="-317.246" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$17">
@@ -2201,8 +2215,19 @@ design rules under a new name.</description>
 <contactref element="U1" pad="10"/>
 <contactref element="U2" pad="2"/>
 <contactref element="C5" pad="2"/>
+<contactref element="U2" pad="4"/>
+<contactref element="JP5" pad="2"/>
+<contactref element="JP8" pad="2"/>
+<wire x1="-36.4236" y1="-402.59" x2="-36.4236" y2="-407.67" width="0" layer="19" extent="1-1"/>
+<wire x1="-39.79" y1="-392.43" x2="-36.4236" y2="-402.59" width="0" layer="19" extent="1-1"/>
 <wire x1="-41.2" y1="-379.73" x2="-39.79" y2="-392.43" width="0" layer="19" extent="1-1"/>
-<wire x1="-26.34" y1="-382.625" x2="-41.2" y2="-379.73" width="0" layer="19" extent="1-1"/>
+<wire x1="-35" y1="-379.73" x2="-41.2" y2="-379.73" width="0" layer="19" extent="1-1"/>
+<wire x1="-26.34" y1="-382.625" x2="-35" y2="-379.73" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$3">
+<contactref element="U1" pad="5"/>
+<contactref element="JP8" pad="1"/>
+<wire x1="-32.08" y1="-381.325" x2="-37.2364" y2="-407.67" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
