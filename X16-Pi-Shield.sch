@@ -6786,7 +6786,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="TP2" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3"/>
 <part name="TP3" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3"/>
 <part name="FRAME2" library="SparkFun-Aesthetics" deviceset="FRAME-A4L" device=""/>
-<part name="JP6" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NO" device="_SILK"/>
 <part name="5V" library="SparkFun-LED" deviceset="LED" device="0603"/>
 <part name="3V" library="SparkFun-LED" deviceset="LED" device="0603"/>
 <part name="R15" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="150"/>
@@ -6834,6 +6833,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="JP8" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NO" device="_SILK"/>
 <part name="J5" library="X16-Pi-Shield" deviceset="BM04B-GHS-TBT" device=""/>
 <part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND10" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="C6" library="X15-Pi-Shield-Parts" deviceset="C-TANTALUM(10UF_150UF)" device="" value="150uF"/>
+<part name="JP9" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NO" device="_SILK"/>
 </parts>
 <sheets>
 <sheet>
@@ -7625,6 +7627,23 @@ has a pull down resistor</text>
 </sheet>
 <sheet>
 <plain>
+<text x="25.4" y="172.72" size="1.778" layer="91">SA0 test point</text>
+<text x="27.94" y="165.1" size="1.778" layer="91">SA1 test point</text>
+<text x="17.78" y="134.62" size="1.778" layer="91">power LEDs</text>
+<text x="45.72" y="121.92" size="1.778" layer="91">Additional Analog Input Sensor</text>
+<text x="45.72" y="88.9" size="1.778" layer="91">3.3V Header Connectors</text>
+<text x="86.36" y="124.46" size="1.778" layer="91">LED on when Overcurrent Detection</text>
+<text x="101.6" y="35.56" size="1.778" layer="91">Circuit to Reset
+Overcurrent Fault</text>
+<text x="101.6" y="12.7" size="1.778" layer="91">VOC Pin on MCR1101 determines current 
+level in which fault is detected.
+Voltage Division with Resistors:
+V_OCD = (1/11)(5V), so 
+0V &lt; V_OCD &lt; 0.225(VCC) 
+and overcurrent fault occurs at &gt;= 6A</text>
+<text x="165.1" y="170.18" size="1.778" layer="91">power sensor</text>
+<text x="218.44" y="137.16" size="1.778" layer="91">linear regulator</text>
+<text x="78.74" y="142.24" size="1.778" layer="91">power sensor bypass</text>
 </plain>
 <instances>
 <instance part="FRAME2" gate="G$1" x="0" y="0" smashed="yes">
@@ -7632,10 +7651,6 @@ has a pull down resistor</text>
 <attribute name="LAST_DATE_TIME" x="181.61" y="6.35" size="2.286" layer="94" font="vector"/>
 <attribute name="SHEET" x="195.58" y="1.27" size="2.54" layer="94" font="vector"/>
 <attribute name="DESIGNER" x="226.26" y="6.35" size="2.54" layer="94" font="vector"/>
-</instance>
-<instance part="JP6" gate="G$1" x="17.78" y="152.4" smashed="yes" rot="R90">
-<attribute name="NAME" x="14.986" y="152.4" size="1.778" layer="95" font="vector" rot="R90" align="center"/>
-<attribute name="VALUE" x="20.574" y="152.4" size="1.778" layer="96" font="vector" rot="R90" align="center"/>
 </instance>
 <instance part="5V" gate="G$1" x="15.24" y="101.6" smashed="yes">
 <attribute name="NAME" x="11.811" y="97.028" size="1.778" layer="95" font="vector" rot="R90"/>
@@ -7765,16 +7780,22 @@ has a pull down resistor</text>
 <attribute name="NAME" x="139.7" y="141.986" size="1.778" layer="95" font="vector" rot="R180" align="center"/>
 <attribute name="VALUE" x="139.7" y="147.574" size="1.778" layer="96" font="vector" rot="R180" align="center"/>
 </instance>
+<instance part="GND10" gate="1" x="106.68" y="139.7" smashed="yes">
+<attribute name="VALUE" x="106.68" y="139.446" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="C6" gate="G$1" x="106.68" y="149.86" smashed="yes">
+<attribute name="NAME" x="107.696" y="150.495" size="1.778" layer="95"/>
+<attribute name="VALUE" x="107.696" y="145.669" size="1.778" layer="96"/>
+</instance>
+<instance part="JP9" gate="G$1" x="96.52" y="165.1" smashed="yes" rot="R180">
+<attribute name="NAME" x="96.52" y="162.306" size="1.778" layer="95" font="vector" rot="R180" align="center"/>
+<attribute name="VALUE" x="96.52" y="167.894" size="1.778" layer="96" font="vector" rot="R180" align="center"/>
+</instance>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="5V" class="0">
-<segment>
-<wire x1="17.78" y1="147.32" x2="17.78" y2="144.78" width="0.1524" layer="91"/>
-<label x="17.78" y="144.78" size="1.778" layer="95"/>
-<pinref part="JP6" gate="G$1" pin="1"/>
-</segment>
 <segment>
 <pinref part="R15" gate="G$1" pin="2"/>
 <wire x1="15.24" y1="124.46" x2="15.24" y2="129.54" width="0.1524" layer="91"/>
@@ -7806,12 +7827,15 @@ has a pull down resistor</text>
 <wire x1="149.86" y1="160.02" x2="144.78" y2="160.02" width="0.1524" layer="91"/>
 <label x="144.78" y="160.02" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="5V_RAW" class="0">
 <segment>
-<wire x1="17.78" y1="157.48" x2="17.78" y2="162.56" width="0.1524" layer="91"/>
-<label x="17.78" y="162.56" size="1.778" layer="95"/>
-<pinref part="JP6" gate="G$1" pin="2"/>
+<wire x1="101.6" y1="165.1" x2="106.68" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="165.1" x2="106.68" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="157.48" x2="106.68" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="157.48" x2="109.22" y2="157.48" width="0.1524" layer="91"/>
+<junction x="106.68" y="157.48"/>
+<label x="109.22" y="157.48" size="1.778" layer="95"/>
+<pinref part="C6" gate="G$1" pin="+"/>
+<pinref part="JP9" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -7895,6 +7919,11 @@ has a pull down resistor</text>
 <pinref part="C5" gate="G$1" pin="1"/>
 <wire x1="248.92" y1="152.4" x2="248.92" y2="144.78" width="0.1524" layer="91"/>
 <label x="248.92" y="147.32" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<wire x1="106.68" y1="144.78" x2="106.68" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="GND10" gate="1" pin="GND"/>
+<pinref part="C6" gate="G$1" pin="-"/>
 </segment>
 </net>
 <net name="3V3" class="0">
@@ -8011,6 +8040,14 @@ has a pull down resistor</text>
 <junction x="198.12" y="129.54"/>
 <pinref part="C4" gate="G$1" pin="2"/>
 </segment>
+<segment>
+<pinref part="JP9" gate="G$1" pin="2"/>
+<wire x1="91.44" y1="165.1" x2="91.44" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="162.56" x2="88.9" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="154.94" x2="91.44" y2="162.56" width="0.1524" layer="91"/>
+<junction x="91.44" y="162.56"/>
+<label x="86.36" y="162.56" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SA1" class="0">
 <segment>
@@ -8095,6 +8132,7 @@ has a pull down resistor</text>
 </sheet>
 <sheet>
 <plain>
+<text x="66.04" y="111.76" size="1.778" layer="91">connecor to backplane</text>
 </plain>
 <instances>
 <instance part="FRAME3" gate="G$1" x="0" y="0" smashed="yes">
