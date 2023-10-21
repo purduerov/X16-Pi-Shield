@@ -6838,6 +6838,27 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <sheets>
 <sheet>
 <plain>
+<text x="33.02" y="30.48" size="1.778" layer="91">Oscillator 
+ECS-80-18-4X</text>
+<text x="17.78" y="160.02" size="1.778" layer="91">IMU</text>
+<text x="2.54" y="157.48" size="1.778" layer="91">FXOS8700-FXAS21002</text>
+<text x="58.42" y="170.18" size="1.778" layer="91">3v3 test point</text>
+<text x="60.96" y="162.56" size="1.778" layer="91">5v test point</text>
+<text x="58.42" y="154.94" size="1.778" layer="91">GND test point</text>
+<text x="68.58" y="5.08" size="1.778" layer="91">I2C Pull-up Resistors</text>
+<text x="40.64" y="111.76" size="1.778" layer="91">BNO055 IMU</text>
+<text x="68.58" y="76.2" size="1.778" layer="91">Only pull ADR high if wanting
+to change address from 
+0x28 to 0x29;
+use 0Ohm to do so, as breakout board
+has a pull down resistor</text>
+<text x="55.88" y="43.18" size="1.778" layer="91">I2C connector</text>
+<text x="114.3" y="33.02" size="1.778" layer="91">I2C connector</text>
+<text x="149.86" y="53.34" size="1.778" layer="91">I2C connector</text>
+<text x="231.14" y="45.72" size="1.778" layer="91">I2C connector</text>
+<text x="185.42" y="38.1" size="1.778" layer="91">UART connector</text>
+<text x="142.24" y="12.7" size="1.778" layer="91">power jumpers</text>
+<text x="83.82" y="58.42" size="1.778" layer="91">SPI connector</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes">
@@ -7495,34 +7516,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="55.88" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="PI_POWER" class="0">
-<segment>
-<wire x1="157.48" y1="20.32" x2="162.56" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="162.56" y1="20.32" x2="162.56" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="157.48" y1="30.48" x2="162.56" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="162.56" y1="30.48" x2="162.56" y2="22.86" width="0.1524" layer="91"/>
-<junction x="162.56" y="20.32"/>
-<wire x1="162.56" y1="22.86" x2="162.56" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="162.56" y1="22.86" x2="165.1" y2="22.86" width="0.1524" layer="91"/>
-<junction x="162.56" y="22.86"/>
-<label x="165.1" y="22.86" size="1.778" layer="95"/>
-<pinref part="C14" gate="G$1" pin="+"/>
-<pinref part="JP3" gate="G$1" pin="1"/>
-<pinref part="JP4" gate="G$1" pin="1"/>
-</segment>
-</net>
 <net name="5V" class="0">
-<segment>
-<wire x1="147.32" y1="30.48" x2="144.78" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="30.48" x2="144.78" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="22.86" x2="144.78" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="20.32" x2="147.32" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="22.86" x2="142.24" y2="22.86" width="0.1524" layer="91"/>
-<junction x="144.78" y="22.86"/>
-<pinref part="JP3" gate="G$1" pin="2"/>
-<pinref part="JP4" gate="G$1" pin="2"/>
-<label x="142.24" y="22.86" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="TP2" gate="G$1" pin="1"/>
 <label x="81.28" y="162.56" size="1.778" layer="95"/>
@@ -7537,6 +7531,20 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="U$1" gate="G$1" pin="5V@4"/>
 <wire x1="119.38" y1="160.02" x2="119.38" y2="167.64" width="0.1524" layer="91"/>
 <label x="116.84" y="165.1" size="1.778" layer="95" rot="R270"/>
+</segment>
+<segment>
+<wire x1="157.48" y1="20.32" x2="162.56" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="20.32" x2="162.56" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="30.48" x2="162.56" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="30.48" x2="162.56" y2="22.86" width="0.1524" layer="91"/>
+<junction x="162.56" y="20.32"/>
+<wire x1="162.56" y1="22.86" x2="162.56" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="22.86" x2="165.1" y2="22.86" width="0.1524" layer="91"/>
+<junction x="162.56" y="22.86"/>
+<label x="165.1" y="22.86" size="1.778" layer="95"/>
+<pinref part="C14" gate="G$1" pin="+"/>
+<pinref part="JP3" gate="G$1" pin="1"/>
+<pinref part="JP4" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="3VO_1" class="0">
@@ -7600,6 +7608,17 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="U$1" gate="G$1" pin="GPIO20"/>
 <wire x1="205.74" y1="160.02" x2="205.74" y2="167.64" width="0.1524" layer="91"/>
 <label x="205.74" y="162.56" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="5V_EXT" class="0">
+<segment>
+<pinref part="JP4" gate="G$1" pin="2"/>
+<wire x1="147.32" y1="30.48" x2="147.32" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="27.94" x2="144.78" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="JP3" gate="G$1" pin="2"/>
+<wire x1="147.32" y1="20.32" x2="147.32" y2="27.94" width="0.1524" layer="91"/>
+<junction x="147.32" y="27.94"/>
+<label x="142.24" y="27.94" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
