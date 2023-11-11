@@ -6430,10 +6430,6 @@ http://www.kemet.com/Lists/ProductCatalog/Attachments/254/KEM_T2005_T491.pdf</de
 <part name="TP6" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3"/>
 <part name="TP7" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3"/>
 <part name="TP8" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3"/>
-<part name="GND11" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="C7" library="X15-Pi-Shield-Parts" deviceset="C-TANTALUM(10UF_150UF)" device="" value="150uF"/>
-<part name="JP6" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NO" device="_SILK"/>
-<part name="JP10" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NO" device="_SILK"/>
 <part name="C1" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="10UF-POLAR" device="-0603-6.3V-20%(TANT)" package3d_urn="urn:adsk.eagle:package:41385074/1" value="120uF"/>
 <part name="C2" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="10UF-POLAR" device="-0603-6.3V-20%(TANT)" package3d_urn="urn:adsk.eagle:package:41385074/1" value="120uF"/>
 <part name="GND1" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
@@ -7032,7 +7028,6 @@ has a pull down resistor</text>
 <text x="25.4" y="160.02" size="1.778" layer="91">3v3 test point</text>
 <text x="27.94" y="152.4" size="1.778" layer="91">5v test point</text>
 <text x="25.4" y="144.78" size="1.778" layer="91">GND test point</text>
-<text x="200.66" y="73.66" size="1.778" layer="91">power jumpers</text>
 </plain>
 <instances>
 <instance part="FRAME2" gate="G$1" x="0" y="0" smashed="yes">
@@ -7143,21 +7138,6 @@ has a pull down resistor</text>
 <attribute name="NAME" x="48.26" y="147.32" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="48.26" y="142.24" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="GND11" gate="1" x="220.98" y="66.04" smashed="yes">
-<attribute name="VALUE" x="220.98" y="65.786" size="1.778" layer="96" align="top-center"/>
-</instance>
-<instance part="C7" gate="G$1" x="220.98" y="76.2" smashed="yes">
-<attribute name="NAME" x="221.996" y="76.835" size="1.778" layer="95"/>
-<attribute name="VALUE" x="221.996" y="72.009" size="1.778" layer="96"/>
-</instance>
-<instance part="JP6" gate="G$1" x="210.82" y="81.28" smashed="yes" rot="R180">
-<attribute name="NAME" x="210.82" y="78.486" size="1.778" layer="95" font="vector" rot="R180" align="center"/>
-<attribute name="VALUE" x="210.82" y="84.074" size="1.778" layer="96" font="vector" rot="R180" align="center"/>
-</instance>
-<instance part="JP10" gate="G$1" x="210.82" y="91.44" smashed="yes" rot="R180">
-<attribute name="NAME" x="210.82" y="88.646" size="1.778" layer="95" font="vector" rot="R180" align="center"/>
-<attribute name="VALUE" x="210.82" y="94.234" size="1.778" layer="96" font="vector" rot="R180" align="center"/>
-</instance>
 </instances>
 <busses>
 </busses>
@@ -7187,20 +7167,6 @@ has a pull down resistor</text>
 <pinref part="TP7" gate="G$1" pin="1"/>
 <label x="48.26" y="152.4" size="1.778" layer="95"/>
 <wire x1="50.8" y1="152.4" x2="40.64" y2="152.4" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<wire x1="215.9" y1="81.28" x2="220.98" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="220.98" y1="81.28" x2="220.98" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="215.9" y1="91.44" x2="220.98" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="220.98" y1="91.44" x2="220.98" y2="83.82" width="0.1524" layer="91"/>
-<junction x="220.98" y="81.28"/>
-<wire x1="220.98" y1="83.82" x2="220.98" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="220.98" y1="83.82" x2="223.52" y2="83.82" width="0.1524" layer="91"/>
-<junction x="220.98" y="83.82"/>
-<label x="223.52" y="83.82" size="1.778" layer="95"/>
-<pinref part="C7" gate="G$1" pin="+"/>
-<pinref part="JP6" gate="G$1" pin="1"/>
-<pinref part="JP10" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -7274,11 +7240,6 @@ has a pull down resistor</text>
 <label x="48.26" y="144.78" size="1.778" layer="95"/>
 <wire x1="50.8" y1="144.78" x2="40.64" y2="144.78" width="0.1524" layer="91"/>
 </segment>
-<segment>
-<wire x1="220.98" y1="71.12" x2="220.98" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="GND11" gate="1" pin="GND"/>
-<pinref part="C7" gate="G$1" pin="-"/>
-</segment>
 </net>
 <net name="3V3" class="0">
 <segment>
@@ -7331,15 +7292,6 @@ has a pull down resistor</text>
 <wire x1="91.44" y1="154.94" x2="91.44" y2="162.56" width="0.1524" layer="91"/>
 <junction x="91.44" y="162.56"/>
 <label x="86.36" y="162.56" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="JP10" gate="G$1" pin="2"/>
-<wire x1="205.74" y1="91.44" x2="205.74" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="205.74" y1="88.9" x2="203.2" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="JP6" gate="G$1" pin="2"/>
-<wire x1="205.74" y1="81.28" x2="205.74" y2="88.9" width="0.1524" layer="91"/>
-<junction x="205.74" y="88.9"/>
-<label x="200.66" y="88.9" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SA1" class="0">
