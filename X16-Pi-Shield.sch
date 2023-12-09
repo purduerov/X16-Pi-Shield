@@ -6271,13 +6271,65 @@ http://www.kemet.com/Lists/ProductCatalog/Attachments/254/KEM_T2005_T491.pdf</de
 <circle x="0" y="0" radius="2.794" width="0.127" layer="39"/>
 <circle x="0" y="0" radius="2.794" width="0.1524" layer="21"/>
 </package>
+<package name="1X03" urn="urn:adsk.eagle:footprint:22340/1" locally_modified="yes">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<wire x1="-3.175" y1="1.27" x2="-1.905" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="1.27" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="0.635" x2="-1.27" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="-0.635" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="0.635" x2="-0.635" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.635" x2="1.27" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="-1.27" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="-1.27" x2="-1.27" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="0.635" x2="-3.81" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-3.175" y1="1.27" x2="-3.81" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="-0.635" x2="-3.175" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="-1.27" x2="-3.175" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.635" x2="1.905" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="1.27" x2="3.175" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="3.175" y1="1.27" x2="3.81" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="0.635" x2="3.81" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="-0.635" x2="3.175" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="3.175" y1="-1.27" x2="1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="1.27" y2="-0.635" width="0.1524" layer="21"/>
+<pad name="1" x="-2.54" y="0" drill="1.016" rot="R90"/>
+<pad name="2" x="0" y="0" drill="1.016" rot="R90"/>
+<pad name="3" x="2.54" y="0" drill="1.016" rot="R90"/>
+<text x="-3.8862" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.81" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
+<rectangle x1="-2.794" y1="-0.254" x2="-2.286" y2="0.254" layer="51"/>
+<rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
+</package>
 </packages>
+<packages3d>
+<package3d name="1X03" urn="urn:adsk.eagle:package:22458/2" type="model">
+<description>PIN HEADER</description>
+<packageinstances>
+<packageinstance name="1X03"/>
+</packageinstances>
+</package3d>
+</packages3d>
 <symbols>
 <symbol name="TESTPOINT">
 <text x="-1.27" y="3.556" size="1.778" layer="95">&gt;NAME</text>
 <text x="-3.81" y="-5.08" size="1.778" layer="97">&gt;TP_SIGNAL_NAME</text>
 <pin name="TP" x="3.302" y="0" visible="off" length="short" direction="in" rot="R180"/>
 <circle x="0" y="0" radius="0.71841875" width="0.254" layer="94"/>
+</symbol>
+<symbol name="PINHD3">
+<wire x1="-2.794" y1="-5.08" x2="0.508" y2="-5.08" width="0.4064" layer="94"/>
+<wire x1="0.508" y1="-5.08" x2="0.508" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="0.508" y1="5.08" x2="-2.794" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="-2.794" y1="5.08" x2="-2.794" y2="-5.08" width="0.4064" layer="94"/>
+<text x="-6.35" y="5.715" size="1.778" layer="95">&gt;NAME</text>
+<text x="-6.35" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-5.08" y="2.54" visible="pad" length="middle" direction="pas" function="dot"/>
+<pin name="2" x="-5.08" y="0" visible="pad" length="middle" direction="pas" function="dot"/>
+<pin name="3" x="-5.08" y="-2.54" visible="pad" length="middle" direction="pas" function="dot"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -6293,6 +6345,29 @@ http://www.kemet.com/Lists/ProductCatalog/Attachments/254/KEM_T2005_T491.pdf</de
 </connects>
 <technologies>
 <technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TEST_PIN-1X3" prefix="JP" uservalue="yes">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<gates>
+<gate name="A" symbol="PINHD3" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="1X03">
+<connects>
+<connect gate="A" pin="1" pad="1"/>
+<connect gate="A" pin="2" pad="2"/>
+<connect gate="A" pin="3" pad="3"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:22458/2"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="POPULARITY" value="92" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -6383,6 +6458,10 @@ http://www.kemet.com/Lists/ProductCatalog/Attachments/254/KEM_T2005_T491.pdf</de
 <part name="GND22" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="J6" library="X16-Pi-Shield" deviceset="BM04B-GHS-TBT" device=""/>
 <part name="GND23" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="JP1" library="X16-ExtraComponents" deviceset="TEST_PIN-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
+<part name="5V1" library="SparkFun-LED" deviceset="LED" device="0603"/>
+<part name="R1" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="150"/>
+<part name="GND24" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7023,6 +7102,25 @@ has a pull down resistor</text>
 <label x="205.74" y="114.3" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="3VO"/>
+<wire x1="76.2" y1="104.14" x2="83.82" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="3VO"/>
+<wire x1="147.32" y1="91.44" x2="137.16" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="LEAK" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="GPIO12"/>
+<wire x1="190.5" y1="160.02" x2="190.5" y2="167.64" width="0.1524" layer="91"/>
+<label x="190.5" y="162.56" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
 </nets>
 </sheet>
 <sheet>
@@ -7142,6 +7240,17 @@ has a pull down resistor</text>
 <instance part="GND22" gate="1" x="93.98" y="71.12" smashed="yes">
 <attribute name="VALUE" x="93.98" y="70.866" size="1.778" layer="96" align="top-center"/>
 </instance>
+<instance part="5V1" gate="G$1" x="144.78" y="71.12" smashed="yes">
+<attribute name="NAME" x="141.351" y="66.548" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="146.685" y="66.548" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
+</instance>
+<instance part="R1" gate="G$1" x="144.78" y="88.9" smashed="yes" rot="R90">
+<attribute name="NAME" x="143.256" y="88.9" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="146.304" y="88.9" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+</instance>
+<instance part="GND24" gate="1" x="144.78" y="60.96" smashed="yes">
+<attribute name="VALUE" x="144.78" y="60.706" size="1.778" layer="96" align="top-center"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -7254,6 +7363,11 @@ has a pull down resistor</text>
 <wire x1="93.98" y1="76.2" x2="93.98" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="GND22" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="5V1" gate="G$1" pin="C"/>
+<wire x1="144.78" y1="66.04" x2="144.78" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="GND24" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="3V3" class="0">
 <segment>
@@ -7314,6 +7428,11 @@ has a pull down resistor</text>
 <wire x1="88.9" y1="78.74" x2="93.98" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="78.74" x2="93.98" y2="81.28" width="0.1524" layer="91"/>
 <label x="91.44" y="81.28" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R1" gate="G$1" pin="2"/>
+<wire x1="144.78" y1="93.98" x2="144.78" y2="99.06" width="0.1524" layer="91"/>
+<label x="144.78" y="99.06" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ALERT" class="0">
@@ -7380,6 +7499,13 @@ has a pull down resistor</text>
 <pinref part="JP8" gate="G$1" pin="1"/>
 <pinref part="U1" gate="G$1" pin="AO"/>
 <wire x1="144.78" y1="144.78" x2="149.86" y2="144.78" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="R1" gate="G$1" pin="1"/>
+<pinref part="5V1" gate="G$1" pin="A"/>
+<wire x1="144.78" y1="83.82" x2="144.78" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
@@ -7568,6 +7694,10 @@ has a pull down resistor</text>
 <instance part="GND21" gate="1" x="121.92" y="60.96" smashed="yes">
 <attribute name="VALUE" x="121.92" y="60.706" size="1.778" layer="96" align="top-center"/>
 </instance>
+<instance part="JP1" gate="A" x="40.64" y="127" smashed="yes">
+<attribute name="NAME" x="34.29" y="132.715" size="1.778" layer="95"/>
+<attribute name="VALUE" x="34.29" y="119.38" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -7597,6 +7727,11 @@ has a pull down resistor</text>
 <wire x1="121.92" y1="71.12" x2="121.92" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="GND21" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="JP1" gate="A" pin="3"/>
+<wire x1="35.56" y1="124.46" x2="27.94" y2="124.46" width="0.1524" layer="91"/>
+<label x="27.94" y="124.46" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="3V3" class="0">
 <segment>
@@ -7605,6 +7740,11 @@ has a pull down resistor</text>
 <pinref part="U$3" gate="G$1" pin="VIN"/>
 <wire x1="121.92" y1="116.84" x2="121.92" y2="99.06" width="0.1524" layer="91"/>
 <label x="120.65" y="105.41" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="JP1" gate="A" pin="2"/>
+<wire x1="35.56" y1="127" x2="27.94" y2="127" width="0.1524" layer="91"/>
+<label x="27.94" y="127" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IMU_INT_2" class="0">
@@ -7619,6 +7759,20 @@ has a pull down resistor</text>
 <pinref part="U$3" gate="G$1" pin="RST"/>
 <wire x1="106.68" y1="81.28" x2="99.06" y2="81.28" width="0.1524" layer="91"/>
 <label x="88.9" y="81.28" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="3VO"/>
+<wire x1="137.16" y1="91.44" x2="144.78" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="91.44" x2="144.78" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="LEAK" class="0">
+<segment>
+<pinref part="JP1" gate="A" pin="1"/>
+<wire x1="35.56" y1="129.54" x2="27.94" y2="129.54" width="0.1524" layer="91"/>
+<label x="27.94" y="129.54" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
