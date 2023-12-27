@@ -9245,8 +9245,8 @@ Source: www.kingbright.com</description>
 <part name="GND16" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="U2" library="X16-Pi-Shield" deviceset="AZ1117IH-3.3TRG1" device=""/>
 <part name="GND17" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
-<part name="C4" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="2.2UF" device="-0603-10V-20%" package3d_urn="urn:adsk.eagle:package:37414/1" value="2.2uF"/>
-<part name="C5" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="2.2UF" device="-0603-10V-20%" package3d_urn="urn:adsk.eagle:package:37414/1" value="2.2uF"/>
+<part name="C4" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="2.2UF" device="-0603-10V-20%" package3d_urn="urn:adsk.eagle:package:37414/1" value="10uF"/>
+<part name="C5" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="2.2UF" device="-0603-10V-20%" package3d_urn="urn:adsk.eagle:package:37414/1" value="22uF"/>
 <part name="GND18" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="GND19" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="JP5" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_2_NO" device="_SILK" package3d_urn="urn:adsk.eagle:package:39279/1"/>
@@ -9277,6 +9277,7 @@ Source: www.kingbright.com</description>
 <part name="5V_EXT" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_0805" package3d_urn="urn:adsk.eagle:package:15821/2"/>
 <part name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:39650/1" value="250"/>
 <part name="GND24" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
+<part name="R2" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:39650/1" value="10k"/>
 </parts>
 <sheets>
 <sheet>
@@ -9416,6 +9417,10 @@ has a pull down resistor</text>
 </instance>
 <instance part="GND23" gate="1" x="129.54" y="45.72" smashed="yes">
 <attribute name="VALUE" x="127" y="43.18" size="1.778" layer="96"/>
+</instance>
+<instance part="R2" gate="G$1" x="78.74" y="22.86" smashed="yes" rot="R90">
+<attribute name="NAME" x="77.216" y="22.86" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="80.264" y="22.86" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
 </instances>
 <busses>
@@ -9725,6 +9730,10 @@ has a pull down resistor</text>
 <wire x1="60.96" y1="33.02" x2="60.96" y2="35.56" width="0.1524" layer="91"/>
 <junction x="60.96" y="33.02"/>
 <label x="60.96" y="35.56" size="1.778" layer="95"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="68.58" y1="33.02" x2="78.74" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="33.02" x2="78.74" y2="27.94" width="0.1524" layer="91"/>
+<junction x="68.58" y="33.02"/>
 </segment>
 <segment>
 <pinref part="J11" gate="G$1" pin="4"/>
@@ -9846,19 +9855,10 @@ has a pull down resistor</text>
 <wire x1="195.58" y1="132.08" x2="195.58" y2="127" width="0.1524" layer="91"/>
 <label x="195.58" y="121.92" size="1.778" layer="95" rot="R90"/>
 </segment>
-</net>
-<net name="SA1" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="GPIO18"/>
-<wire x1="139.7" y1="160.02" x2="139.7" y2="167.64" width="0.1524" layer="91"/>
-<label x="139.7" y="162.56" size="1.778" layer="95" rot="R90"/>
-</segment>
-</net>
-<net name="SA0" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="GPIO21"/>
-<wire x1="210.82" y1="160.02" x2="210.82" y2="167.64" width="0.1524" layer="91"/>
-<label x="210.82" y="162.56" size="1.778" layer="95" rot="R90"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="78.74" y1="17.78" x2="78.74" y2="12.7" width="0.1524" layer="91"/>
+<label x="78.74" y="10.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$17" class="0">
@@ -10342,13 +10342,6 @@ has a pull down resistor</text>
 <busses>
 </busses>
 <nets>
-<net name="SA0" class="0">
-<segment>
-<pinref part="J4" gate="A" pin="2"/>
-<wire x1="60.96" y1="105.41" x2="49.53" y2="105.41" width="0.1524" layer="91"/>
-<label x="49.53" y="105.41" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="GPIO_1" class="0">
 <segment>
 <pinref part="J4" gate="A" pin="1"/>
@@ -10438,13 +10431,6 @@ has a pull down resistor</text>
 <pinref part="J4" gate="A" pin="16"/>
 <wire x1="60.96" y1="69.85" x2="49.53" y2="69.85" width="0.1524" layer="91"/>
 <label x="49.53" y="69.85" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="SA1" class="0">
-<segment>
-<pinref part="J4" gate="A" pin="15"/>
-<wire x1="60.96" y1="72.39" x2="49.53" y2="72.39" width="0.1524" layer="91"/>
-<label x="49.53" y="72.39" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GPIO_8" class="0">
