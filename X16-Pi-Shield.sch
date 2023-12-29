@@ -9224,8 +9224,8 @@ Source: www.kingbright.com</description>
 <part name="J11" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_04" device="" package3d_urn="urn:adsk.eagle:package:38085/1"/>
 <part name="GND29" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="FRAME2" library="SparkFun-Aesthetics" deviceset="FRAME-A4L" device=""/>
-<part name="5V" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_0805" package3d_urn="urn:adsk.eagle:package:15821/2"/>
-<part name="3V" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_0805" package3d_urn="urn:adsk.eagle:package:15821/2"/>
+<part name="5V_LED" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_0805" package3d_urn="urn:adsk.eagle:package:15821/2"/>
+<part name="3V_LED" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_0805" package3d_urn="urn:adsk.eagle:package:15821/2"/>
 <part name="R15" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:39650/1" value="250"/>
 <part name="R16" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0603" package3d_urn="urn:adsk.eagle:package:39650/1" value="150"/>
 <part name="GND43" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
@@ -9955,11 +9955,11 @@ has a pull down resistor</text>
 <attribute name="SHEET" x="195.58" y="1.27" size="2.54" layer="94" font="vector"/>
 <attribute name="DESIGNER" x="226.26" y="6.35" size="2.54" layer="94" font="vector"/>
 </instance>
-<instance part="5V" gate="G$1" x="157.48" y="71.12" smashed="yes">
+<instance part="5V_LED" gate="G$1" x="157.48" y="71.12" smashed="yes">
 <attribute name="NAME" x="154.051" y="66.548" size="1.778" layer="95" font="vector" rot="R90"/>
 <attribute name="VALUE" x="159.385" y="66.548" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
 </instance>
-<instance part="3V" gate="G$1" x="172.72" y="71.12" smashed="yes">
+<instance part="3V_LED" gate="G$1" x="172.72" y="71.12" smashed="yes">
 <attribute name="NAME" x="169.291" y="66.548" size="1.778" layer="95" font="vector" rot="R90"/>
 <attribute name="VALUE" x="174.625" y="66.548" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
 </instance>
@@ -10101,25 +10101,25 @@ has a pull down resistor</text>
 <net name="N$7" class="0">
 <segment>
 <pinref part="R15" gate="G$1" pin="1"/>
-<pinref part="5V" gate="G$1" pin="A"/>
+<pinref part="5V_LED" gate="G$1" pin="A"/>
 <wire x1="157.48" y1="83.82" x2="157.48" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
 <segment>
 <pinref part="R16" gate="G$1" pin="1"/>
-<pinref part="3V" gate="G$1" pin="A"/>
+<pinref part="3V_LED" gate="G$1" pin="A"/>
 <wire x1="172.72" y1="83.82" x2="172.72" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
-<pinref part="3V" gate="G$1" pin="C"/>
+<pinref part="3V_LED" gate="G$1" pin="C"/>
 <wire x1="172.72" y1="66.04" x2="172.72" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="GND44" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="5V" gate="G$1" pin="C"/>
+<pinref part="5V_LED" gate="G$1" pin="C"/>
 <wire x1="157.48" y1="66.04" x2="157.48" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="GND43" gate="1" pin="GND"/>
 </segment>
